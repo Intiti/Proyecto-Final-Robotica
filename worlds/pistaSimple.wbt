@@ -1,0 +1,119 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/WallPlug.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/computers/protos/Monitor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/toys/protos/RubberDuck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/Can.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/chairs/protos/OfficeChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/WaterBottle.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/rocks/protos/Rock.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/plants/protos/FlowerPot.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/JamJar.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5301953837162212 0.516821850710929 0.6721517906795602 2.0512146327381884
+  position 2.045017404401231 -2.769227528992842 13.528023229365647
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+RubberDuck {
+  translation 0.4917997997165763 0.41927105385007285 0.020438018204875136
+  rotation -2.003971050155297e-15 5.271936196027566e-16 -1 0.03560867926943885
+}
+WallPlug {
+  translation -0.603827 0.283582 0.04
+}
+Monitor {
+  translation 0.685814 -0.265168 6.68354e-14
+}
+Can {
+  translation -0.05753697443382043 0.5331245398962289 0.06096266000002062
+  rotation -1.7189878216121695e-15 1.52885975710382e-14 1 0.0029929529892847983
+}
+OfficeChair {
+  hidden position_0_0 -0.1328452715565298
+  hidden rotation_1 0 0 -1 0.13284527155652873
+  translation -0.5229298698079061 -0.3568778242989725 -0.001415027682967307
+  rotation -0.006665885189785266 -0.04429743151290335 -0.9989961479084872 0.031373428792031456
+}
+WaterBottle {
+  translation -0.426753 0.698963 -0.002392399999942285
+  rotation 0.03552261389707213 0.06297135224252695 -0.9973829518788996 3.1797282791406565e-16
+}
+Rock {
+  translation 0.332695 -0.819915 0
+}
+Rock {
+  translation -0.178896 -0.374024 0
+  name "rock(1)"
+}
+Rock {
+  translation -0.0756944 -0.35743 0
+  name "rock(2)"
+}
+Rock {
+  translation 0.0279827 -0.347454 0
+  name "rock(3)"
+}
+Rock {
+  translation 0.420515 -0.362163 0
+  name "rock(4)"
+}
+Rock {
+  translation 0.505421 -0.363365 0
+  name "rock(8)"
+}
+Rock {
+  translation -0.237268 -0.42431 0
+  name "rock(9)"
+}
+Rock {
+  translation 0.603317 -0.363733 0
+  name "rock(10)"
+}
+Rock {
+  translation 0.331411 -0.347933 0
+  name "rock(7)"
+}
+Rock {
+  translation 0.233278 -0.344256 0
+  name "rock(6)"
+}
+Rock {
+  translation 0.123344 -0.357958 0
+  name "rock(5)"
+}
+FlowerPot {
+  translation 0.412093 0.795687 3.10862e-15
+}
+JamJar {
+  translation 0.8057640451240211 0.21693704577230552 -0.0006961999999706842
+  rotation -8.816735323344679e-15 5.072775581711631e-18 1 0.010691746739593683
+}
+E-puck {
+  hidden position_0_0 0.43141211833056325
+  hidden position_0_1 -0.4314121183305337
+  hidden linearVelocity_0 -1.217390395796825e-08 3.8876893609262494e-09 -1.252468951605168e-11
+  hidden angularVelocity_0 -2.5701582662386894e-07 -8.240389658113876e-07 -0.03309349721115285
+  hidden rotation_1 0 0.9999999999999999 0 0.43141211833056303
+  hidden linearVelocity_1 0.0008211850473674792 -0.0002568093443961344 -1.265609780155089e-12
+  hidden angularVelocity_1 0.0140158373708171 0.04481347063666703 -0.033093692206684226
+  hidden rotation_2 0 -1 0 0.43141211833053394
+  hidden linearVelocity_2 -0.0008212176751165144 0.0002568195651865621 1.164091043533448e-12
+  hidden angularVelocity_2 -0.01401635140167956 -0.04481511871488102 -0.033093692409539036
+  translation -0.9499999995983445 0.9500000011203334 -6.396178031861481e-05
+  rotation 1.8724126034072543e-07 1.1752252102479991e-06 -0.999999999999292 0.3036414058702108
+  controller "controllerSimple"
+  window "<none>"
+}
