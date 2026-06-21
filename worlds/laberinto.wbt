@@ -1,0 +1,464 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+  basicTimeStep 32
+}
+Viewpoint {
+  orientation 0 0 1 0
+  position 0 0 3
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+Solid {
+  translation -0.4500 0.7000 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.6000 0.1000
+      }
+    }
+  ]
+  name "muro0"
+  boundingObject Box {
+    size 0.1000 0.6000 0.1000
+  }
+}
+Solid {
+  translation 0.7500 0.5500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.9000 0.1000
+      }
+    }
+  ]
+  name "muro1"
+  boundingObject Box {
+    size 0.1000 0.9000 0.1000
+  }
+}
+Solid {
+  translation -0.8500 0.7500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro2"
+  boundingObject Box {
+    size 0.3000 0.1000 0.1000
+  }
+}
+Solid {
+  translation -0.1500 0.4500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.7000 0.1000
+      }
+    }
+  ]
+  name "muro3"
+  boundingObject Box {
+    size 0.1000 0.7000 0.1000
+  }
+}
+Solid {
+  translation 0.3000 0.7500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.4000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro4"
+  boundingObject Box {
+    size 0.4000 0.1000 0.1000
+  }
+}
+Solid {
+  translation 0.1500 0.2500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.9000 0.1000
+      }
+    }
+  ]
+  name "muro5"
+  boundingObject Box {
+    size 0.1000 0.9000 0.1000
+  }
+}
+Solid {
+  translation 0.4500 0.2500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.9000 0.1000
+      }
+    }
+  ]
+  name "muro6"
+  boundingObject Box {
+    size 0.1000 0.9000 0.1000
+  }
+}
+Solid {
+  translation -0.6500 0.4500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro7"
+  boundingObject Box {
+    size 0.3000 0.1000 0.1000
+  }
+}
+Solid {
+  translation -0.7500 0.1000 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.6000 0.1000
+      }
+    }
+  ]
+  name "muro8"
+  boundingObject Box {
+    size 0.1000 0.6000 0.1000
+  }
+}
+Solid {
+  translation -0.3500 0.1500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro9"
+  boundingObject Box {
+    size 0.3000 0.1000 0.1000
+  }
+}
+Solid {
+  translation -0.4500 -0.0500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.3000 0.1000
+      }
+    }
+  ]
+  name "muro10"
+  boundingObject Box {
+    size 0.1000 0.3000 0.1000
+  }
+}
+Solid {
+  translation -0.6000 -0.1500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro11"
+  boundingObject Box {
+    size 0.2000 0.1000 0.1000
+  }
+}
+Solid {
+  translation -0.0500 -0.1500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro12"
+  boundingObject Box {
+    size 0.3000 0.1000 0.1000
+  }
+}
+Solid {
+  translation 0.6500 -0.1500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro13"
+  boundingObject Box {
+    size 0.3000 0.1000 0.1000
+  }
+}
+Solid {
+  translation -0.1500 -0.5000 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.6000 0.1000
+      }
+    }
+  ]
+  name "muro14"
+  boundingObject Box {
+    size 0.1000 0.6000 0.1000
+  }
+}
+Solid {
+  translation 0.7500 -0.5000 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.6000 0.1000
+      }
+    }
+  ]
+  name "muro15"
+  boundingObject Box {
+    size 0.1000 0.6000 0.1000
+  }
+}
+Solid {
+  translation -0.6000 -0.4500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.8000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro16"
+  boundingObject Box {
+    size 0.8000 0.1000 0.1000
+  }
+}
+Solid {
+  translation 0.1500 -0.6000 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.4000 0.1000
+      }
+    }
+  ]
+  name "muro17"
+  boundingObject Box {
+    size 0.1000 0.4000 0.1000
+  }
+}
+Solid {
+  translation 0.5500 -0.4500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro18"
+  boundingObject Box {
+    size 0.3000 0.1000 0.1000
+  }
+}
+Solid {
+  translation -0.6000 -0.7500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.4000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro19"
+  boundingObject Box {
+    size 0.4000 0.1000 0.1000
+  }
+}
+Solid {
+  translation 0.3500 -0.7500 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3000 0.1000 0.1000
+      }
+    }
+  ]
+  name "muro20"
+  boundingObject Box {
+    size 0.3000 0.1000 0.1000
+  }
+}
+Solid {
+  translation -0.4500 -0.9000 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.2000 0.1000
+      }
+    }
+  ]
+  name "muro21"
+  boundingObject Box {
+    size 0.1000 0.2000 0.1000
+  }
+}
+Solid {
+  translation 0.4500 -0.9000 0.0500
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.35 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1000 0.2000 0.1000
+      }
+    }
+  ]
+  name "muro22"
+  boundingObject Box {
+    size 0.1000 0.2000 0.1000
+  }
+}
+E-puck {
+  translation -0.95 0.95 0
+  rotation 0 0 1 0
+  controller "controllerSimple"
+  window "<none>"
+}
