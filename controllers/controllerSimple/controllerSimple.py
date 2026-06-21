@@ -73,10 +73,11 @@ def calcularAvanceRuedas(pos, posActualIzq, posActualDer):
     avanceRuedaDer = deltaDer * radioRuedas
     avance = (avanceRuedaIzq + avanceRuedaDer) / 2
     deltaTheta = (avanceRuedaDer - avanceRuedaIzq) / distanciaEjes
-    pos["actual"] += avance
+    thetaMedio = pos["theta"] + deltaTheta / 2.0
+    pos["x"] += avance * math.cos(thetaMedio)
+    pos["y"] += avance * math.sin(thetaMedio)
     pos["theta"] += deltaTheta
-    pos["x"] += avance * math.cos(pos["theta"])
-    pos["y"] += avance * math.sin(pos["theta"])
+    pos["actual"] += abs(avance)
     return avance
 
 def transformarNodoAMetros(nodo):
@@ -122,6 +123,9 @@ def algoritmoAStar(grilla, inicio, meta):
             if 0 <= vecino[0] < filas and 0 <= vecino[1] < columnas:
                 if grilla[vecino[0]][vecino[1]] == 1:
                     continue
+                if deltaFila != 0 and deltaCol != 0:
+                    if grilla[actual[0]][vecino[1]] == 1 or grilla[vecino[0]][actual[1]] == 1:
+                        continue
                 pesoMovimiento = math.sqrt(deltaFila**2 + deltaCol**2)
                 tentativeGScore = gScore[tuple(actual)] + pesoMovimiento
                 if tentativeGScore < gScore.get(tuple(vecino), float("inf")):
