@@ -1,4 +1,4 @@
-# Navegación Autónoma con Planificación de Rutas en Webots
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/e4d0c57e-8b1f-4f77-8431-f2314c355220" /># Navegación Autónoma con Planificación de Rutas en Webots
 
 **Curso:** Robótica y Sistemas Autónomos 2026-01 — ICI 4150  
 **Línea:** A — Planificación de rutas con A*
@@ -55,6 +55,7 @@ yMetros = 1.0 - (fila × 0.1) - 0.05
 ```
 
 ### Seguimiento de waypoints
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/639103cf-5e97-42c6-8058-ded57272ec54" />
 
 El robot avanza por cada waypoint de la ruta planificada usando control proporcional:
 
@@ -142,6 +143,8 @@ y_k = y_{k-1} + Δs · sin(φ_{k-1} + Δφ/2)
 | Colisiones | — |
 
 > Los valores se completan con los datos registrados en consola durante la simulación.
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/196573d0-9c94-48e5-80b2-e29457f598cc" />
 
 ---
 
