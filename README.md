@@ -1,4 +1,4 @@
-<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/e4d0c57e-8b1f-4f77-8431-f2314c355220" /># Navegación Autónoma con Planificación de Rutas en Webots
+# Navegación Autónoma con Planificación de Rutas en Webots
 
 **Curso:** Robótica y Sistemas Autónomos 2026-01 — ICI 4150  
 **Línea:** A — Planificación de rutas con A*
