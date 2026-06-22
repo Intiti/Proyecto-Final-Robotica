@@ -32,6 +32,7 @@ Implementar un sistema de navegación autónoma para un robot e-puck en Webots, 
 - Arena de **2 m × 2 m** discretizada en grilla de ocupación completa.
 - Pocos obstáculos distribuidos, ruta de baja complejidad.
 - **Inicio:** `(-0.95, 0.95)` → **Meta:** `(0.775, -0.925)` *(esquina superior izquierda a inferior derecha)*
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/4c3716ae-d179-49f1-9f16-060282544d00" />
 
 ---
 
@@ -154,6 +155,9 @@ def calcularAvanceRuedas(pos, posActualIzq, posActualDer):
 | Posición teórica esperada | X: 0.7750 m · Y: -0.9250 m |
 | Distancia odométrica acumulada | 6.5935 m |
 | Intervenciones reactivas locales | 6 eventos |
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/632d3eca-6c10-4b26-a061-059ab76dce93" />
+
 
 ---
 
