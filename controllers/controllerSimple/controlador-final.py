@@ -19,8 +19,35 @@ mapa_facil = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
-inicio = (0, 0)
-meta   = (15, 15)
+
+mapa_laberinto = [
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+    [1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0],
+    [1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0],
+    [0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0],
+    [0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0],
+    [0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0],
+    [0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0],
+    [0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+    [0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0],
+    [0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0],
+    [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+]
+
+ESCENARIOS = {
+    "facil": {"mapa": mapa_facil, "inicio": (0, 0), "meta": (15, 15)},
+    "laberinto": {"mapa": mapa_laberinto, "inicio": (0, 0), "meta": (15, 3)},
+}
+ESCENARIO = "laberinto"
+
+mapa   = ESCENARIOS[ESCENARIO]["mapa"]
+inicio = ESCENARIOS[ESCENARIO]["inicio"]
+meta   = ESCENARIOS[ESCENARIO]["meta"]
 
 robot = Robot()
 timestep = int(robot.getBasicTimeStep())
@@ -92,7 +119,7 @@ def aestrella(mapa: list, inicio, meta):
 
     return None
 
-camino: list = aestrella(mapa_facil, inicio, meta)
+camino: list = aestrella(mapa, inicio, meta)
 tamano_celda: float = 0.125
 mitad_arena: float = 1.0
 
@@ -105,8 +132,8 @@ def celda_a_mundo(celda):
 def mundo_a_celda(x, y):
     col = int(math.floor((x + mitad_arena) / tamano_celda))
     fila = int(math.floor((mitad_arena - y) / tamano_celda))
-    col = max(0, min(len(mapa_facil[0]) - 1, col))
-    fila = max(0, min(len(mapa_facil) - 1, fila))
+    col = max(0, min(len(mapa[0]) - 1, col))
+    fila = max(0, min(len(mapa) - 1, fila))
     return (fila, col)
 
 def imprimir_mapa(x, y):
@@ -114,14 +141,14 @@ def imprimir_mapa(x, y):
     print("\n" * 2)
     print("===== NAVEGACIÓN DEL ROBOT =====")
 
-    for f in range(len(mapa_facil)):
+    for f in range(len(mapa)):
         linea = ""
-        for c in range(len(mapa_facil[0])):
+        for c in range(len(mapa[0])):
             if f == fila_rob and c == col_rob:
                 linea += "[R]"
             elif (f, c) == meta:
                 linea += "[M]"
-            elif mapa_facil[f][c] == 1:
+            elif mapa[f][c] == 1:
                 linea += "███"
             else:
                 linea += " . "
@@ -170,6 +197,10 @@ vel_giro = 1.0
 tolerancia_dist = 0.03
 tolerancia_angulo = 0.05
 umbral_sensor = 80.0
+kp_centrado = 0.005
+umbral_pared = 70.0
+lectura_centrado = 130.0
+corr_max = vel * 0.6
 
 while robot.step(timestep) != -1:
     actualizar_odometria(pos, enc_izq.getValue(), enc_der.getValue())
@@ -201,8 +232,20 @@ while robot.step(timestep) != -1:
                 motor_izq.setVelocity(0.0)
                 motor_der.setVelocity(0.0)
             else:
-                motor_izq.setVelocity(vel)
-                motor_der.setVelocity(vel)
+                lat_izq = sensor_izq.getValue()
+                lat_der = sensor_der.getValue()
+                izq_cerca = lat_izq > umbral_pared
+                der_cerca = lat_der > umbral_pared
+                correccion = 0.0
+                if izq_cerca and der_cerca:
+                    correccion = kp_centrado * (lat_izq - lat_der)
+                elif izq_cerca:
+                    correccion = kp_centrado * (lat_izq - lectura_centrado)
+                elif der_cerca:
+                    correccion = -kp_centrado * (lat_der - lectura_centrado)
+                correccion = max(min(correccion, corr_max), -corr_max)
+                motor_izq.setVelocity(vel + correccion)
+                motor_der.setVelocity(vel - correccion)
     else:
         motor_izq.setVelocity(0.0)
         motor_der.setVelocity(0.0)
